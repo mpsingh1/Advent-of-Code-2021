@@ -41,8 +41,6 @@ for key in C1:
     for letter in key:
         val[letter] += C1[key]
 
-
-print(D)
 for letter in val:
     val[letter] -= D[letter]
 
