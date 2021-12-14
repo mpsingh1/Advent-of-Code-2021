@@ -1,8 +1,7 @@
 from collections import Counter
 
-file = 'test14.txt'
-# file = 'input14.txt'
-data = {}
+# file = 'test14.txt'
+file = 'input14.txt'
 mapping = {}
 
 
