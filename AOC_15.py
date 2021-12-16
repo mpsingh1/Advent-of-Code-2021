@@ -17,18 +17,18 @@ def neighbour(pos):
     return n
 
 
-def scale_map(some_array, multiplier):
-    R = len(some_array)
-    C = len(some_array[0])
-    new_R = R * multiplier
-    new_C = C * multiplier
-    new_array = [[0] * new_C for row in range(new_R)]
+def scale_map(arr, multiplier):
+    ROWS = len(arr)
+    COLS = len(arr[0])
+    new_R = ROWS * multiplier
+    new_C = COLS * multiplier
+    new_arr = [[0] * new_C for row in range(new_R)]
     for r in range(new_R):
         for c in range(new_C):
-            new_array[r][c] = (some_array[r % R][c % C] + c // C + r // R) % 9
-            if new_array[r][c] == 0:
-                new_array[r][c] = 9
-    return new_array
+            new_arr[r][c] = (arr[r % ROWS][c % COLS] + c // COLS + r // ROWS) % 9
+            if new_arr[r][c] == 0:
+                new_arr[r][c] = 9
+    return new_arr
 
 
 def find_path(arr):
